@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "name": "Hosting Tournaments",
+    "img_url": "https://example.com/tournaments.jpg",
+    "price": "$5000",
+    "short_description": "Bring competitive football to your community",
+    "description": "Our Hosting Tournaments service brings the excitement of competitive football to your community. Whether it's a local youth tournament, corporate event, or amateur competition, we handle all aspects of planning, scheduling matches, securing venues, and promoting the tournament to ensure a seamless and memorable experience for participants and spectators."
+  },
+  {
+    "id": 2,
+    "name": "Fan Engagement",
+    "img_url": "https://example.com/fan_engagement.jpg",
+    "price": "$1000",
+    "short_description": "Celebrate the bond between fans and teams",
+    "description": "Fan Engagement events celebrate the special bond between fans and their favorite football teams. From meet-and-greets with football stars to autograph sessions and exclusive fan experiences, we create unforgettable moments that deepen the emotional connection fans have with their beloved teams and players."
+  },
+  {
+    "id": 3,
+    "name": "Football Awards Gala",
+    "img_url": "https://example.com/awards_gala.jpg",
+    "price": "$7500",
+    "short_description": "Honoring excellence in football",
+    "description": "The Football Awards Gala is a glamorous night of celebration where we honor outstanding players, coaches, and contributors to the sport. This red-carpet event features awards presentations, inspiring speeches, and entertainment, creating a prestigious and unforgettable evening for the football community."
+  },
+  {
+    "id": 4,
+    "name": "Football Skill Workshops",
+    "img_url": "https://example.com/skill_workshops.jpg",
+    "price": "$800",
+    "short_description": "Improve your football skills",
+    "description": "Football Skill Workshops are immersive sessions for participants of all skill levels. Led by professional coaches and players, these workshops cover various aspects of the game, including dribbling, passing, shooting, and defensive strategies. Our goal is to create an environment that fosters improvement and a deeper understanding of football fundamentals."
+  },
+  {
+    "id": 5,
+    "name": "Football Fundraising Auctions",
+    "img_url": "https://example.com/fundraising_auctions.jpg",
+    "price": "$2000",
+    "short_description": "Combine memorabilia with charity",
+    "description": "Our Football Fundraising Auctions combine the excitement of football memorabilia with the noble cause of raising funds for charitable initiatives. We curate a collection of unique football items, jerseys, and collectibles for auction, allowing fans and philanthropists to bid on prized pieces while contributing to important causes within the football community."
+  },
+  {
+    "id": 6,
+    "name": "Football eSports Tournaments",
+    "img_url": "https://example.com/esports_tournaments.jpg",
+    "price": "$3000",
+    "short_description": "Experience football in the digital world",
+    "description": "Experience the fusion of football and gaming in our Football eSports Tournaments. Gamers can compete in virtual matches featuring popular football video games, while spectators can enjoy the action and cheer on their favorite eSports teams and players in a dynamic and thrilling atmosphere."
+  }
+]

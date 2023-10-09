@@ -19,7 +19,7 @@ const Home = () => {
       <div className="max-w-[1440px] border-2 mx-auto">
         <Services events={events}></Services>
       </div>
-      <div className="h-[800px]">
+      <div>
         <WhatClientSays></WhatClientSays>
       </div>
     </div>

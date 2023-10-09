@@ -1,8 +1,9 @@
 const WhatClientSays = () => {
   return (
-    <div className="my-10 absolute">
+    <div className="mt-10">
       <h1 className="text-center text-4xl font-bold">What Clients Say</h1>
       {/* carasuol */}
+      <div >
       <div className="carousel w-full h-full mt-10">
         {/* item 1 */}
         <div id="item1" className="carousel-item w-full bg-red-200 h-full">
@@ -90,7 +91,7 @@ const WhatClientSays = () => {
         </div>
 
       </div>
-      <div className="flex justify-center w-full py-0 gap-2 relative bottom-14">
+      <div className="flex justify-center w-full py-2 mb-1 gap-2">
         <a href="#item1" className="btn btn-sm bg-orange-400 active:bg-black border-none">
           1
         </a>
@@ -103,6 +104,7 @@ const WhatClientSays = () => {
         <a href="#item4" className="btn btn-sm bg-orange-400 active:bg-black border-none">
           4
         </a>
+      </div>
       </div>
     </div>
   );

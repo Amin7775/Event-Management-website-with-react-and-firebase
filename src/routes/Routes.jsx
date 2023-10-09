@@ -22,7 +22,8 @@ const routes = createBrowserRouter([
         },
         {
             path:"/aboutUs",
-            element:<AboutUs></AboutUs>
+            element:<AboutUs></AboutUs>,
+            loader:()=> fetch('/team.json')
         },
         {
             path:"/login",

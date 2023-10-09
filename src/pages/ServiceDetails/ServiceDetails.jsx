@@ -47,7 +47,6 @@ const ServiceDetails = () => {
             <h1 className="text-2xl md:text-4xl font-medium">Event Highlights</h1>
             <p className="text-lg md:text-2xl">{event_highlights}</p>
             </div>
-            
         </div>
       </div>
     </div>

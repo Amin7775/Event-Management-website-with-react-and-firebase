@@ -8,6 +8,7 @@ import Register from "../pages/Register/Register";
 import Membership from "../pages/Membership/Membership";
 import Orders from "../pages/Orders/Orders";
 import ServiceDetails from "../pages/ServiceDetails/ServiceDetails";
+import PrivateRoute from "./PrivateRoute";
 
 const routes = createBrowserRouter([
   {
@@ -35,15 +36,15 @@ const routes = createBrowserRouter([
         },
         {
             path: "/membership",
-            element: <Membership></Membership>
+            element: <PrivateRoute><Membership></Membership></PrivateRoute>
         },
         {
             path: "/orders",
-            element: <Orders></Orders>
+            element: <PrivateRoute><Orders></Orders></PrivateRoute>
         },
         {
             path: "/services/:id",
-            element:<ServiceDetails></ServiceDetails>,
+            element:<PrivateRoute><ServiceDetails></ServiceDetails></PrivateRoute>,
             loader: ()=> fetch('/events.json')
         }
         

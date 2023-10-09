@@ -1,10 +1,12 @@
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
+import { useLocation, useNavigate } from "react-router-dom";
 
 
 const Login = () => {
-
-  const {logIn} = useContext(AuthContext)
+  const location= useLocation();
+  const navigate = useNavigate()
+  const {logIn,googleSignIn} = useContext(AuthContext)
 
   const handleLogin = e =>{
     e.preventDefault();
@@ -14,7 +16,14 @@ const Login = () => {
     const password = form.get('password')
 
     logIn(email,password)
-    .then("Login from login page success")
+    .then(user=>{
+      console.log("from login",user)
+      navigate(location?.state ? location.state: '/')
+    })
+  }
+
+  const handleGoogleLogin=()=>{
+    googleSignIn()
   }
     return (
         <div className="h-[80vh] bg-[#F3F3F3]">
@@ -22,7 +31,7 @@ const Login = () => {
         <div className="hero bg-base-200">
           <div className="hero-content flex-col w-[40vw]">
             <div className="card flex-shrink-0 w-full shadow-2xl bg-base-100">
-              <h1 className="text-4xl font-bold text-center mt-6 mb-4">Register Your Account</h1>
+              <h1 className="text-4xl font-bold text-center mt-6 mb-4">Login to Your Account</h1>
               <hr className="w-full border-2"/>
               <form onSubmit={handleLogin} className="card-body">
                 {/* email */}
@@ -55,6 +64,7 @@ const Login = () => {
                 <div className="form-control mt-6">
                   <button className="btn btn-primary">Login</button>
                 </div>
+              <p>Sign In With Google? <span onClick={handleGoogleLogin} className="text-blue-600 cursor-pointer">Click Here</span></p>
               </form>
             </div>
           </div>

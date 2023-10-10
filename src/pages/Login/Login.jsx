@@ -5,6 +5,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 
 const Login = () => {
   const location= useLocation();
+  console.log("from Location login",location)
   const navigate = useNavigate()
   const {logIn,googleSignIn} = useContext(AuthContext)
 
@@ -18,7 +19,8 @@ const Login = () => {
     logIn(email,password)
     .then(user=>{
       console.log("from login",user)
-      navigate(location?.state ? location.state: '/')
+      navigate(location?.state ? location.state : '/')
+      
     })
   }
 

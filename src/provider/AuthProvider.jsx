@@ -10,8 +10,9 @@ const provider = new GoogleAuthProvider();
 
 const AuthProvider = ({children}) => {
     const [user,setUser]=useState(null)
-    const [loading,setLoading] = useState(null)
+    const [loading,setLoading] = useState(true)
     const [photo,setPhoto] = useState(null)
+    const [cartItems,setCartItems]=useState([]);
 
     const createUser = (email,password) => {
         setLoading(true)
@@ -35,12 +36,14 @@ const AuthProvider = ({children}) => {
 
     // update user
     const updateUserInfo = (name,photoUrl) =>{
+        setLoading(true)
         {photoUrl && setPhoto(photoUrl)}
         return updateProfile(auth.currentUser, {
             displayName: name, 
             photoURL: photoUrl
           })
     }
+    
 
     // sign in
 
@@ -60,7 +63,7 @@ const AuthProvider = ({children}) => {
         updateUserInfo,
         logIn,
         logOut,
-        photo,googleSignIn
+        photo,googleSignIn,setCartItems,cartItems
     }
     return (
         <AuthContext.Provider value={authInfo}>

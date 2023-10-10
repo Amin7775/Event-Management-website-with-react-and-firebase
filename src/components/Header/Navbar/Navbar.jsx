@@ -37,10 +37,10 @@ const Navbar = () => {
       {user && (
         <>
           <li className="hover:text-black hover:bg-orange-400 rounded-md">
-            <NavLink to={"/membership"}>Membership</NavLink>
+            <NavLink to={"/profile"}>Profile</NavLink>
           </li>
           <li className="hover:text-black hover:bg-orange-400 rounded-md">
-            <NavLink to={"/orders"}>Orders</NavLink>
+            <NavLink to={"/cart"}>Cart</NavLink>
           </li>
         </>
       )}
@@ -91,8 +91,8 @@ const Navbar = () => {
       {/* user section */}
       <div className="navbar-end mr-2">
         {user ? (
-          <>
-            <p className="mr-2">{user.displayName}</p>
+          <div className="flex items-center gap-3">
+            <p>{user.displayName}</p>
             <div className="dropdown dropdown-end">
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                 <div className="w-20 rounded-full mt-2">
@@ -114,7 +114,10 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-          </>
+              <button onClick={handleSignOut} className="btn bg-orange-600 border-0 text-white py-2 px-8 font-semibold hover:bg-orange-400">
+            Logout
+          </button>
+          </div>
         ) : (
           <>
             <p className="mr-2">Guest Mode</p>

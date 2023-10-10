@@ -1,12 +1,23 @@
+import { useContext } from "react";
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
+import { AuthContext } from "../../provider/AuthProvider";
 
 const ServiceDetails = () => {
+  const {setCartItems,cartItems}= useContext(AuthContext)
   const [service, setService] = useState([]);
 
+  
   const { id } = useParams();
   const loaderData = useLoaderData();
-
+  
+  const addToCart=(id)=>{
+    if(cartItems.find(find=> find.id == id)){
+      return
+    }
+    setCartItems([...cartItems,service])
+  }
+  
   useEffect(() => {
     const findService = loaderData.find((find) => find.id == id);
     setService(findService);
@@ -30,7 +41,7 @@ const ServiceDetails = () => {
             
             <p className="text-lg md:text-xl md:font-medium">{introduction}</p>
 
-            <a className="btn bg-orange-400 py-5 w-48 border-0 h-auto">Add To Orders List</a>
+            <button onClick={()=>addToCart(id)} className="btn bg-orange-400 py-5 w-48 border-0 h-auto">Add To Cart List</button>
         </div>
 
         {/* Section 2 */}

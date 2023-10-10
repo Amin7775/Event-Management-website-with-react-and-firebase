@@ -5,10 +5,10 @@ import Home from "../pages/Home/Home";
 import AboutUs from "../pages/AboutUs/AboutUs";
 import Login from "../pages/Login/Login";
 import Register from "../pages/Register/Register";
-import Membership from "../pages/Membership/Membership";
-import Orders from "../pages/Orders/Orders";
+import Cart from "../pages/Cart/Cart";
 import ServiceDetails from "../pages/ServiceDetails/ServiceDetails";
 import PrivateRoute from "./PrivateRoute";
+import Profile from "../pages/Profile/Profile";
 
 const routes = createBrowserRouter([
   {
@@ -35,12 +35,13 @@ const routes = createBrowserRouter([
             element: <Register></Register>
         },
         {
-            path: "/membership",
-            element: <PrivateRoute><Membership></Membership></PrivateRoute>
+            path: "/profile",
+            element: <PrivateRoute><Profile></Profile></PrivateRoute>
         },
         {
-            path: "/orders",
-            element: <PrivateRoute><Orders></Orders></PrivateRoute>
+            path: "/cart",
+            element: <PrivateRoute><Cart></Cart></PrivateRoute>,
+            
         },
         {
             path: "/services/:id",

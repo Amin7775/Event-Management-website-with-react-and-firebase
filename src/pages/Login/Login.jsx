@@ -1,6 +1,6 @@
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
-import { useLocation, useNavigate } from "react-router-dom";
+import { Link, useLocation, useNavigate } from "react-router-dom";
 
 
 const Login = () => {
@@ -31,9 +31,9 @@ const Login = () => {
         <div className="h-[80vh] bg-[#F3F3F3]">
       <div className="flex flex-col justify-center items-center h-full">
         <div className="hero bg-base-200">
-          <div className="hero-content flex-col w-[40vw]">
+          <div className="hero-content flex-col w-full md:w-[80vw] lg:w-[40vw]">
             <div className="card flex-shrink-0 w-full shadow-2xl bg-base-100">
-              <h1 className="text-4xl font-bold text-center mt-6 mb-4">Login to Your Account</h1>
+              <h1 className=" text-2xl md:text-3xl lg:text-4xl font-bold text-center mt-6 mb-4 md:px-5 lg:px-0">Login to Your Account</h1>
               <hr className="w-full border-2"/>
               <form onSubmit={handleLogin} className="card-body">
                 {/* email */}
@@ -66,7 +66,8 @@ const Login = () => {
                 <div className="form-control mt-6">
                   <button className="btn btn-primary">Login</button>
                 </div>
-              <p>Sign In With Google? <span onClick={handleGoogleLogin} className="text-blue-600 cursor-pointer">Click Here</span></p>
+              <p className="text-center mt-2">Sign In With Google? <span onClick={handleGoogleLogin} className="text-blue-600 cursor-pointer">Click Here</span></p>
+              <p className="text-center">Don't have an account ? <span className="text-blue-600 font-medium"><Link to={"/register"}>Register</Link></span></p>
               </form>
             </div>
           </div>

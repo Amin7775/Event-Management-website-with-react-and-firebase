@@ -11,12 +11,12 @@ const Home = () => {
       <Banner></Banner>
       {/* main section */}
       {/* Upcoming Events */}
-      <div className="max-w-[1440px] border-2 mx-auto">
+      <div className="max-w-[1440px]  mx-auto">
         <UpcomingEvents></UpcomingEvents>
       </div>
 
       {/* Services Section */}
-      <div className="max-w-[1440px] border-2 mx-auto">
+      <div className="max-w-[1440px]  mx-auto p-1">
         <Services events={events}></Services>
       </div>
       <div>

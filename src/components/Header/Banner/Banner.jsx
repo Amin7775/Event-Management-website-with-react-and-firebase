@@ -6,12 +6,12 @@ const Banner = () => {
     >
       <div className="hero-overlay bg-opacity-70"></div>
       <div className="hero-content text-center text-white">
-        <div className=" space-y-6">
-          <h1 className="text-5xl font-bold ">Welcome to <span className="text-orange-400">Foot</span>events</h1>
-          <h2 className="text-2xl font-medium text-[#ffc100]">
+        <div className="space-y-5 md:space-y-6">
+          <h1 className="text-3xl md:text-5xl font-bold ">Welcome to <span className="text-orange-400">Foot</span>events</h1>
+          <h2 className="text-xl md:text-2xl font-medium text-[#ffc100]">
             We Are A Team Of Professionals
           </h2>
-          <h2 className="text-2xl font-medium text-[#ffc100]">
+          <h2 className="text-xl md:text-2xl font-medium text-[#ffc100]">
             Working On Football Event Managements Since 2001
           </h2>
           <p className="text-xl font-medium

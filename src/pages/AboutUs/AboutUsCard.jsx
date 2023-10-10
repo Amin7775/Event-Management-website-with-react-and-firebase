@@ -7,7 +7,7 @@ const AboutUsCard = ({member}) => {
       <figure>
         <img
           src={img_url}
-          className="w-full h-[450px]"
+          className="w-full md:w-5/6 lg:w-full h-[400px] md:h-[450px]"
         />
       </figure>
       <div className="card-body">

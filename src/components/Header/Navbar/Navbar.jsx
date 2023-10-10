@@ -47,7 +47,7 @@ const Navbar = () => {
     </>
   );
   return (
-    <div className="navbar   bg-[#1d263f] text-white px-3 py-4">
+    <div className="navbar  bg-[#1d263f] text-white px-3 py-4">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -114,7 +114,7 @@ const Navbar = () => {
                 </li>
               </ul>
             </div>
-              <button onClick={handleSignOut} className="btn bg-orange-600 border-0 text-white py-2 px-8 font-semibold hover:bg-orange-400">
+              <button onClick={handleSignOut} className="btn bg-orange-600 border-0 text-white py-2 px-8 font-semibold hover:bg-orange-400 hidden md:block">
             Logout
           </button>
           </div>

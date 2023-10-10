@@ -16,19 +16,19 @@ const Profile = () => {
 
             
             {/* User Details */}
-            <div className="flex-1 border-2 p-5 bg-[#1b293d] text-white h-[100vh]">
+            <div className="md:flex-1 border-2 p-5 bg-[#1b293d] text-white h-[100vh] ">
                 <h1 className="text-4xl text-center font-bold mt-5 mb-10">Profile Details</h1>
                 <div className="flex flex-col gap-5">
-                <img className="h-[500px] w-[500px] rounded-full mx-auto" src={user.photoURL} alt="" />
+                <img className="md:h-[350px] lg:h-[450px] w-[450px] rounded-full mx-auto" src={user.photoURL} alt="" />
                 <p className="text-2xl font-medium"><span className="font-semibold">Name</span> : {user.displayName}</p>
                 <p className="text-2xl font-medium"><span className="font-semibold">Email</span> : {user.email}</p>
                 <p className="text-2xl font-medium"><span className="font-semibold">Verified</span> : {user.emailVerified ? user.emailVerified : "No"}</p>
-                <p className="text-2xl font-medium"><span className="font-semibold">PhoneNumber</span> : {user.phoneNumber ? user.phoneNumber : "No"}</p>
+                <p className="text-2xl font-medium"><span className="font-semibold">Phone Number</span> : {user.phoneNumber ? user.phoneNumber : "No"}</p>
 
                 </div>
             </div>
 
-            <div className="flex-1 border-2 bg-[#52238a] text-white h-[100vh]">
+            <div className="flex-1 border-2 bg-[#52238a] text-white h-[100vh] hidden md:block">
             <h1 className="text-4xl text-center font-bold mt-5 mb-10">Update Profile</h1>
 
             <form onSubmit={handleProfile} className="card-body">

@@ -1,9 +1,13 @@
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider"
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 const Register = () => {
 
     const {createUser,updateUserInfo} = useContext(AuthContext)
+    const navigate=useNavigate();
 
     const handleRegister = e => {
         e.preventDefault()
@@ -15,16 +19,40 @@ const Register = () => {
         const email = form.get('email')
         const password = form.get('password')
 
+        // validation
+        if(password.length<6){
+          toast("Password Must Have At least 6 Characters")
+          return
+        }
+
+        if(!/[A-Z]/.test(password)){
+          toast("Password Must Have At least 1 Capital Letter")
+          return
+        }
+
+        if (!/[!@#$%^&*()_+{}\[\]:;<>,.?~\\-]/.test(password)) {
+          toast("Password Must Have At least 1 Special Characters")
+          return 
+        }
+
         console.log(name,photoUrl,email,password)
 
         createUser(email,password)
         .then(()=>{
             updateUserInfo(name,photoUrl)
-            .then(console.log("success"))
+            .then(()=>{
+              toast("Registration Success")
+              setTimeout(()=>{
+                navigate('/')
+              },2000)
+            })
+        })
+        .catch((error)=>{
+          toast(error.message)
         })
     }
   return (
-    <div className="h-[80vh] bg-[#F3F3F3]">
+    <div className="  bg-[#F3F3F3]">
       <div className="flex flex-col justify-center items-center h-full">
         <div className="hero bg-base-200">
           <div className="hero-content flex-col w-full md:w-[80vw] lg:w-[40vw]">
@@ -91,6 +119,7 @@ const Register = () => {
                 <p className="text-center mt-4">Already have an account ? <span className="text-blue-600 font-medium"><Link to={"/login"}>Login</Link></span></p>
               </form>
             </div>
+            <ToastContainer />
           </div>
         </div>
       </div>

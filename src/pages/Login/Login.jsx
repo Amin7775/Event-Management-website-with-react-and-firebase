@@ -1,6 +1,7 @@
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
+import { ToastContainer, toast } from "react-toastify";
 
 
 const Login = () => {
@@ -16,16 +17,30 @@ const Login = () => {
     const email = form.get('email')
     const password = form.get('password')
 
+    
+
     logIn(email,password)
-    .then(user=>{
-      console.log("from login",user)
-      navigate(location?.state ? location.state : '/')
+    .then((user)=>{
+      toast("You have logged in !")
+      console.log(user)
+      setTimeout(()=>{
+        navigate(location?.state ? location.state : '/')
+      },2000)
       
+    })
+    .catch(error=>{
+      toast(error.message)
     })
   }
 
   const handleGoogleLogin=()=>{
     googleSignIn()
+    .then(()=>{
+      toast("You Have Successfully Logged in using Google");
+      setTimeout(()=>{
+        navigate('/')
+      },2000)
+    })
   }
     return (
         <div className="h-[80vh] bg-[#F3F3F3]">
@@ -70,6 +85,7 @@ const Login = () => {
               <p className="text-center">Don't have an account ? <span className="text-blue-600 font-medium"><Link to={"/register"}>Register</Link></span></p>
               </form>
             </div>
+            <ToastContainer />
           </div>
         </div>
       </div>

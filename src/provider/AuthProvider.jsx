@@ -36,8 +36,8 @@ const AuthProvider = ({children}) => {
 
     // update user
     const updateUserInfo = (name,photoUrl) =>{
-        setLoading(true)
         {photoUrl && setPhoto(photoUrl)}
+        {photoUrl || setPhoto("https://i.ibb.co/RjNr5mp/speaker2.jpg")}
         return updateProfile(auth.currentUser, {
             displayName: name, 
             photoURL: photoUrl

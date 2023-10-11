@@ -89,7 +89,7 @@ const Login = () => {
                 <div className="form-control mt-6">
                   <button className="btn btn-primary">Login</button>
                 </div>
-              <p className="text-center mt-2">Sign In With Google? <span onClick={handleGoogleLogin} className="text-blue-600 cursor-pointer">Click Here</span></p>
+              <p className="text-center mt-2">Sign In With Google? <span onClick={handleGoogleLogin} className="text-blue-600 cursor-pointer font-medium">Click Here</span></p>
               <p className="text-center">Don't have an account ? <span className="text-blue-600 font-medium"><Link to={"/register"}>Register</Link></span></p>
               </form>
             </div>

@@ -26,24 +26,24 @@ const Navbar = () => {
  
   const navLinks = (
     <>
-      <li className="hover:text-black hover:bg-orange-400 rounded-md">
+      <li className="hover:text-black hover:bg-orange-400 rounded-md mx-1">
         <NavLink to={"/"}>Home</NavLink>
       </li>
-      <li className="hover:text-black hover:bg-orange-400 rounded-md">
+      <li className="hover:text-black hover:bg-orange-400 rounded-md mx-1">
         <NavLink to={"/aboutUs"}>About Us</NavLink>
       </li>
-      <li className="hover:text-black hover:bg-orange-400 rounded-md">
+      <li className="hover:text-black hover:bg-orange-400 rounded-md mx-1">
         <NavLink to={"/login"}>Login</NavLink>
       </li>
-      <li className="hover:text-black hover:bg-orange-400 rounded-md">
+      <li className="hover:text-black hover:bg-orange-400 rounded-md mx-1">
         <NavLink to={"/register"}>Register</NavLink>
       </li>
       {user && (
         <>
-          <li className="hover:text-black hover:bg-orange-400 rounded-md">
+          <li className="hover:text-black hover:bg-orange-400 rounded-md mx-1">
             <NavLink to={"/profile"}>Profile</NavLink>
           </li>
-          <li className="hover:text-black hover:bg-orange-400 rounded-md">
+          <li className="hover:text-black hover:bg-orange-400 rounded-md mx-1">
             <NavLink to={"/cart"}>Cart</NavLink>
           </li>
         </>

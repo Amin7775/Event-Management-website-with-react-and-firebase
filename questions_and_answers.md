@@ -20,9 +20,7 @@ console.log(greetign);
 
 #### Answer: A
 
-<i>Write your explanation here</i>
-
-Answer is A Because in js we dont need straight variable declaration . We can just write let greeting = "hello" or simply write greeting = "hello".  as we see above , there is 2 variables . greeting and greetign. They both are valid is js and so when we log greetign , we see the empty object which is inside greetign.
+<i>Answer is A Because in js we dont need straight variable declaration . We can just write let greeting = "hello" or simply write greeting = "hello".  as we see above , there is 2 variables . greeting and greetign. They both are valid is js and so when we log greetign , we see the empty object which is inside greetign.</i>
 
 </p>
 </details>

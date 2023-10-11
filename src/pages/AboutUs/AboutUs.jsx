@@ -43,7 +43,7 @@ const AboutUs = () => {
     
     <h2 className="text-center text-4xl font-bold mt-10 mb-5">Our Team</h2>
 
-    <div className="grid grid-cols-1  lg:grid-cols-3 my-10 p-5 md:px-28 lg:p-0 md:gap-5 gap-10">
+    <div className="grid grid-cols-1  lg:grid-cols-3 my-10 p-5 md:px-28 lg:p-2 md:gap-5 gap-10">
         {
             team.map(member=> <AboutUsCard key={member.id} member={member}></AboutUsCard>)
         }

@@ -3,8 +3,15 @@ import { AuthContext } from "../../provider/AuthProvider"
 import { Link, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
+
 
 const Register = () => {
+  useEffect(()=>{
+    Aos.init();
+  },[])
 
     const {createUser,updateUserInfo} = useContext(AuthContext)
     const navigate=useNavigate();
@@ -52,7 +59,7 @@ const Register = () => {
         })
     }
   return (
-    <div className="  bg-[#F3F3F3]">
+    <div data-aos="fade-down" data-aos-duration="1000" className="  bg-[#F3F3F3]">
       <div className="flex flex-col justify-center items-center h-full">
         <div className="hero bg-base-200">
           <div className="hero-content flex-col w-full md:w-[80vw] lg:w-[40vw]">

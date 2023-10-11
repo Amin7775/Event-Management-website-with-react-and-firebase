@@ -96,7 +96,7 @@ const Navbar = () => {
       <div className="navbar-end mr-2">
         {user ? (
           <div className="flex items-center gap-3">
-            <p>{user.displayName}</p>
+            <p className="hidden md:block">{user.displayName}</p>
             <div className="dropdown dropdown-end">
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                 <div className="w-20 rounded-full mt-2">
@@ -124,7 +124,7 @@ const Navbar = () => {
           </div>
         ) : (
           <>
-            <p className="mr-2">Guest Mode</p>
+            <p className="mr-2 hidden md:block">Guest Mode</p>
             <div className="dropdown dropdown-end">
               <label tabIndex={0} className="btn btn-ghost btn-circle avatar">
                 <div className="w-20 rounded-full">

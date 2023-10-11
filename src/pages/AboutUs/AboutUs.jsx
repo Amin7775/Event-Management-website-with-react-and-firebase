@@ -1,10 +1,17 @@
 import { useLoaderData } from "react-router-dom";
 import AboutUsCard from "./AboutUsCard";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 const AboutUs = () => {
+  useEffect(()=>{
+    Aos.init();
+  },[])
+
     const team = useLoaderData();
   return (
-    <div className="max-w-[1440px] mx-auto">
+    <div data-aos="fade-down" data-aos-duration="1000" className="max-w-[1440px] mx-auto">
       <h1 className="text-center text-5xl font-bold my-5">About Us</h1>
       <p className="p-5 lg:p-0 text-lg">
         At Footevents, our love for football fuels our mission to bring the

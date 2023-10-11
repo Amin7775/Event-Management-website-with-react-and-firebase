@@ -1,9 +1,15 @@
 import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
 
 
 const Profile = () => {
     const {user} = useContext(AuthContext)
+    useEffect(()=>{
+      Aos.init();
+    },[])
 
     const handleProfile=e=>{
       e.preventDefault()
@@ -11,7 +17,7 @@ const Profile = () => {
     }
 
     return (
-        <div className="max-w-[1440px] mx-auto ">
+        <div data-aos="fade-down" data-aos-duration="1000" className="max-w-[1440px] mx-auto ">
             <div className="flex flow-col lg:flex-row  justify-center items-center w-full h-full">
 
             

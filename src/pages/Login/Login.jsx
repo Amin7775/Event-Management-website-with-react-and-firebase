@@ -2,6 +2,10 @@ import { useContext } from "react";
 import { AuthContext } from "../../provider/AuthProvider";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import { ToastContainer, toast } from "react-toastify";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+import { useEffect } from "react";
+
 
 
 const Login = () => {
@@ -10,9 +14,13 @@ const Login = () => {
   const navigate = useNavigate()
   const {logIn,googleSignIn} = useContext(AuthContext)
 
+  useEffect(()=>{
+    Aos.init();
+  },[])
+
   const handleLogin = e =>{
     e.preventDefault();
-
+    
     const form = new FormData(e.currentTarget)
     const email = form.get('email')
     const password = form.get('password')
@@ -43,7 +51,7 @@ const Login = () => {
     })
   }
     return (
-        <div className="h-[80vh] bg-[#F3F3F3]">
+        <div data-aos="fade-down" data-aos-duration="1000" className="h-[80vh] bg-[#F3F3F3]">
       <div className="flex flex-col justify-center items-center h-full">
         <div className="hero bg-base-200">
           <div className="hero-content flex-col w-full md:w-[80vw] lg:w-[40vw]">

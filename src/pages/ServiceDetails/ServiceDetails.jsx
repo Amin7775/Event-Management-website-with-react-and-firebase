@@ -2,8 +2,17 @@ import { useContext } from "react";
 import { useEffect, useState } from "react";
 import { useLoaderData, useParams } from "react-router-dom";
 import { AuthContext } from "../../provider/AuthProvider";
+import Aos from "aos";
+import 'aos/dist/aos.css'
+
 
 const ServiceDetails = () => {
+
+  useEffect(()=>{
+    Aos.init();
+  },[])
+
+
   const {setCartItems,cartItems}= useContext(AuthContext)
   const [service, setService] = useState([]);
 
@@ -26,7 +35,7 @@ const ServiceDetails = () => {
   const { name, img_url, price,introduction,event_highlights,what_we_do} = service;
 
   return (
-    <div className=" w-full mx-auto text-white">
+    <div data-aos="fade-down" data-aos-duration="1000" className=" w-full mx-auto text-white">
       <div className="grid grid-cols-1 lg:grid-cols-2">
 
         {/* img */}
